@@ -3,7 +3,7 @@ import localFont from "next/font/local";
 import { Inter, IBM_Plex_Serif } from "next/font/google"
 import "./globals.css";
 
-const inter =  Inter({ subsets: ["latin"], variable: '--font-inter' });
+const inter = Inter({ subsets: ["latin"], variable: '--font-inter' });
 const imbPlexSerif = IBM_Plex_Serif({
   subsets: ['latin'],
   weight: ['400', '700'],
@@ -36,9 +36,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${inter.variable} ${imbPlexSerif.variable}`}
-      >
+      <body className={`${inter.variable} ${imbPlexSerif.variable}`}>
         {children}
       </body>
     </html>
