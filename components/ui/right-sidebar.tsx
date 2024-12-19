@@ -10,11 +10,11 @@ const RightSidebar = (props: RightSidebarProps) => {
         <div className='profile-banner' />
         <div className='profile'>
           <div className='profile-img'>
-            <span className='text-5xl font-bold text-blue-500'>{props.user.firstName[0]}</span>
+            <span className='text-5xl font-bold text-blue-500'>{props.user?.name}</span>
           </div>
           <div className='profile-details'>
-            <h1 className='profile-name'>{props.user.firstName} {props.user.lastName}</h1>
-            <p className='profile-email'>{props.user.email}</p>
+            <h1 className='profile-name'>{props.user?.firstName} {props.user?.lastName}</h1>
+            <p className='profile-email'>{props.user?.email}</p>
           </div>
         </div>
       </section>
@@ -37,7 +37,7 @@ const RightSidebar = (props: RightSidebarProps) => {
               <BankCard
                 key={props.banks[0].$id}
                 account={props.banks[0]}
-                userName={`${props.user.firstName} ${props.user.lastName}`}
+                userName={props.user?.name}
                 showBalance={false}
               />
             </div>
@@ -46,7 +46,7 @@ const RightSidebar = (props: RightSidebarProps) => {
                 <BankCard
                   key={props.banks[1].$id}
                   account={props.banks[1]}
-                  userName={`${props.user.firstName} ${props.user.lastName}`}
+                  userName={props.user?.name}
                   showBalance={false}
                 />
               </div>}
